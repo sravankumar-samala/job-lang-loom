@@ -1,0 +1,114 @@
+.home-container {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/80/213/299/dark-purple-background-photoshop-matte-paint-flowers-hd-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  backdrop-filter: blur(30px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.find-jobs-container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto 1fr;
+  color: var(--txt-white);
+  padding-inline: 1em;
+}
+.find-jobs-container h1 {
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  margin-block: 5px;
+}
+.find-jobs-container p {
+  font-size: clamp(0.95rem, 1.5vw, 1.7rem);
+  color: var(--clr-light);
+}
+.title-container {
+  height: 300px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, transparent, #bea8ffb0, transparent);
+  border-image-slice: 1;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+    top: 0; */
+}
+/* .form-out-of-view {
+    position: absolute;
+    top: 10px;
+    z-index: 999;
+  } */
+
+.select-language {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 0.5em 1em;
+  width: min(100%, 300px);
+  margin-block: 2em;
+}
+.select-language option {
+  color: var(--txt-white);
+  background-color: var(--clr-dark);
+}
+.select-language option:hover {
+  background-color: black;
+}
+
+.search-btn {
+  border: none;
+  outline: none;
+  padding: 0.583em 1em;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  background-color: var(--clr-dark);
+  color: white;
+  border: 1px solid #5e5383;
+  border-left: 0;
+}
+.logout-btn {
+  background-color: transparent;
+  border: 1px solid var(--clr-light);
+  color: var(--clr-light);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3em 1.5em;
+  transition: 0.2s;
+}
+.logout-btn:hover {
+  --clr-light-2: rgb(212, 212, 212);
+  color: var(--clr-light-2);
+  border-color: var(--clr-light-2);
+}
+
+.jobs-list-title {
+  margin-top: 2em;
+  color: var(--txt-white);
+}

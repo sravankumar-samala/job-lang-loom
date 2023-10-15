@@ -1,0 +1,48 @@
+.apply-form-container {
+  display: grid;
+  gap: 1.5em;
+  background-color: var(--clr-dark);
+  border: 1px solid rgba(236, 236, 236, 0.445);
+  border-radius: 1em;
+  padding: 2em clamp(1em, 2.3vw, 3em);
+}
+.apply-form-container h1 {
+  color: #34b134;
+}
+.input-field {
+  display: grid;
+}
+.input-field label {
+  font-weight: 500;
+  font-size: clamp(1rem, 1.4vw, 1.7rem);
+  margin-block-end: 5px;
+}
+.input-field input,
+.input-field textarea {
+  border: 1px solid var(--clr-light);
+  border-radius: 7px;
+}
+.file-input input {
+  border: none;
+  padding: 0;
+}
+.input-field textarea {
+  background-color: transparent;
+  outline: none;
+  padding: 0.5em;
+  font-size: clamp(0.9re, 1vw + 1rem, 1rem);
+}
+
+.apply-form-container .apply-submit-btn {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin-block-end: 0;
+}
+.success-container {
+  border: 1px solid #34b134;
+}
+.success-btn {
+  padding: 0.5em;
+  background-color: #9dd39d !important;
+  font-weight: bold;
+}

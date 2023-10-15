@@ -1,0 +1,16 @@
+.not-found-container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1em;
+}
+.not-found-container img {
+  max-width: 100%;
+}
+.not-found-container h1 {
+  margin-block-end: 0;
+  color: #1a0824;
+}
+.not-found-container p {
+  color: #b2b8d9;
+}

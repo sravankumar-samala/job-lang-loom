@@ -1,0 +1,123 @@
+.page-container {
+  min-height: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/1372684.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* background-color: blue; */
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+.form {
+  width: min(40ch, 90%);
+  display: grid;
+  justify-items: center;
+  gap: 1.5em;
+  background-image: linear-gradient(
+    160deg,
+    rgba(174, 174, 178, 0.9),
+    rgba(174, 174, 178, 0.5),
+    rgba(174, 174, 178, 0.3)
+  );
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.301);
+  padding: 1.3em;
+  border-radius: 14px;
+  position: relative;
+  z-index: 9;
+}
+.form h1 {
+  font-weight: 500;
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  color: #2d0045;
+  margin-block: 0;
+}
+.heading-container {
+  display: grid;
+  place-items: center;
+}
+.sub-heading {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #2d0045;
+  margin-block: 0 20px;
+}
+/* .sub-heading, */
+.signup-btn {
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #2d0045;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.form img {
+  width: 26%;
+  margin-block: 0.5em;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.562);
+  border-radius: 50%;
+  position: absolute;
+  top: -45px;
+}
+.input-container {
+  border-bottom: 1px solid #280f2c;
+  width: 100%;
+  position: relative;
+}
+.input-container input {
+  color: #2d0045;
+  font-size: 1.2rem;
+}
+.text-field input {
+  font-weight: 600;
+  max-width: 90%;
+}
+.text-field input::placeholder,
+.password-field input::placeholder {
+  color: #280f2cad;
+  font-weight: 500;
+}
+
+.password-field button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: #2d0045;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.login-btn-container {
+  width: 100%;
+  display: grid;
+  text-align: center;
+}
+button {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.submit-btn {
+  margin-block-start: 1em;
+  padding: 0.5em;
+  background-color: #2d0045;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #dddde0;
+}
+.error-msg {
+  margin-block: 5px 0;
+  color: #830000;
+}
+.hidden-error {
+  visibility: hidden;
+}

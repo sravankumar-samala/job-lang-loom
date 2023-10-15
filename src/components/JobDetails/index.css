@@ -1,0 +1,88 @@
+.job-details-page-container {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/80/213/299/dark-purple-background-photoshop-matte-paint-flowers-hd-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  backdrop-filter: blur(30px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: var(--clr-light);
+}
+.job-details-page-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+.job-details-container {
+  display: grid;
+  place-items: center;
+  padding: 1em;
+}
+.details-wrapper {
+  width: min(96%, 100ch);
+  background-color: var(--clr-light);
+  border-radius: 0.7em;
+  color: var(--clr-dark);
+  padding: clamp(0.8em, 1vw, 1em);
+  display: grid;
+  place-content: center;
+}
+.job-details-header h1 {
+  font-size: clamp(1.5rem, 2.2vw, 2.7rem);
+}
+.job-details-header h3 {
+  font-size: clamp(1.1rem, 1.7vw, 1.7rem);
+}
+
+.more-job-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-basis: 200px;
+}
+.micro-details h4 {
+  margin-block-end: 0;
+  font-size: clamp(1rem, 1.7vw, 1.7rem);
+}
+.micro-details p {
+  margin-block-start: 7px;
+  font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+}
+.title {
+  text-wrap: balance;
+}
+.redirect-link {
+  color: rgb(56, 56, 255);
+  text-decoration-line: underline;
+}
+.apply-btn {
+  place-self: center;
+  color: var(--txt-white);
+  background-color: var(--clr-dark);
+  padding: 0.5em 2em;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+  justify-self: center;
+  align-self: flex-end;
+  margin-block: 1em;
+  transition: 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 576px) {
+  .details-wrapper {
+    text-align: center;
+  }
+}
+@media (max-width: 486px) {
+  .more-job-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* place-items: center;
+      place-content: center; */
+  }
+}

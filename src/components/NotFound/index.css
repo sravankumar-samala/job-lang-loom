@@ -3,6 +3,7 @@
   place-items: center;
   text-align: center;
   padding: 1em;
+  z-index: 99;
 }
 .not-found-container img {
   max-width: 100%;

@@ -50,13 +50,13 @@ export default function Login() {
     }
     // setSubmitError(false);
     const userDetails = JSON.parse(user);
+    console.log(userDetails);
     if (
       userName !== userDetails.username ||
       password !== userDetails.password
     ) {
       return setError("Invalid UserName or Password");
     }
-    console.log(userDetails);
     const jwt_token = uuid();
     onSubmitSuccess(jwt_token);
   };

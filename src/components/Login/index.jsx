@@ -45,7 +45,7 @@ export default function Login() {
 
     // check if user exists or not
     const user = localStorage.getItem("user");
-    if (user === undefined) {
+    if (user === null) {
       return setError("User not found, please sing-up first");
     }
     // setSubmitError(false);

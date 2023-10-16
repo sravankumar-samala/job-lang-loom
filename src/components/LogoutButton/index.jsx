@@ -1,7 +1,7 @@
 import { createRef, forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdLogout } from "react-icons/md";
-import { useMediaQuery } from "@uidotdev/usehooks";
+// import { useMediaQuery } from "@uidotdev/usehooks";
 import Cookies from "js-cookie";
 import Popup from "reactjs-popup";
 import "./index.css";
@@ -11,13 +11,15 @@ const ForwardedMdLogout = forwardRef(function ForwardedMdLogout(props, ref) {
 });
 
 export default function LogoutButton() {
-  const isSmalScreen = useMediaQuery("(max-width: 576px)");
+  // const isSmalScreen = useMediaQuery("(max-width: 576px)");
+  let media = window.matchMedia("(max-width: 600px)");
+  const isSmallScreen = media.matches;
   const ref = createRef();
 
   return (
     <Popup
       trigger={
-        isSmalScreen ? (
+        isSmallScreen ? (
           <ForwardedMdLogout ref={ref} className="logout-icon" />
         ) : (
           <button type="button" className="logout-btn">

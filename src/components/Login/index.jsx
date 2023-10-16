@@ -56,6 +56,7 @@ export default function Login() {
     ) {
       return setError("Invalid UserName or Password");
     }
+    console.log(userDetails);
     const jwt_token = uuid();
     onSubmitSuccess(jwt_token);
   };

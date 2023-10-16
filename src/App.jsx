@@ -10,7 +10,7 @@ const App = () => (
   <Routes>
     <Route index element={<Navigate replace to="/home" />} />
     <Route path="/login" element={<Login />} />
-    <Route path="/signup" element={<Protected Component={SignUp} />} />
+    <Route path="/signup" element={<SignUp />} />
     <Route path="/home" element={<Protected Component={Home} />} />
     <Route
       path="/jobDetails/:id"

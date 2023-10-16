@@ -13,9 +13,9 @@ export default function SignUp() {
 
   useEffect(() => {
     const jwtToken = Cookies.get("jwt_token");
-    if (jwtToken !== undefined) {
-      return navigate("/");
-    }
+    const user = localStorage.getItem("user");
+    if (jwtToken !== undefined) navigate("/");
+    if (user !== undefined) navigate("/login");
   });
 
   const onChangeUserName = (event) => {

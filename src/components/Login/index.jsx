@@ -45,11 +45,10 @@ export default function Login() {
 
     // check if user exists or not
     const user = localStorage.getItem("user");
-    if (user === null) {
+    console.log(user);
+    if (!user) {
       return setError("User not found, please sing-up first");
-      // navigate("/signup");
     }
-    // setSubmitError(false);
     const userDetails = JSON.parse(user);
     console.log(userDetails);
     if (

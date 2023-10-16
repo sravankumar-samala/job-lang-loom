@@ -45,12 +45,10 @@ export default function Login() {
 
     // check if user exists or not
     const user = localStorage.getItem("user");
-    console.log(user);
     if (!user) {
       return setError("User not found, please sing-up first");
     }
     const userDetails = JSON.parse(user);
-    console.log(userDetails);
     if (
       userName !== userDetails.username ||
       password !== userDetails.password
@@ -109,10 +107,6 @@ export default function Login() {
             </button>
           </p>
         </div>
-        {/* <img
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-          alt="profile logo"
-        /> */}
         {renderNameInputField()}
         {renderPasswordInputField()}
         <div className="login-btn-container">

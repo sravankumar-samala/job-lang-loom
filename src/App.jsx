@@ -7,8 +7,7 @@ import JobDetails from "./components/JobDetails";
 import NotFound from "./components/NotFound";
 
 const App = () => (
-  <Routes basename="/job-lang-loom">
-    {/* <Route index element={<Navigate replace to="/home" />} /> */}
+  <Routes>
     <Route path="/" element={<Protected Component={Home} />} />
     <Route path="/login" element={<Login />} />
     <Route path="/signup" element={<SignUp />} />

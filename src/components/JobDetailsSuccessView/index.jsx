@@ -14,10 +14,6 @@ export default function JobDetailsSuccessView() {
     description,
     redirectUrl,
   } = jobDetailsObj;
-  // const { title } = jobDetailsObj
-
-  console.log(jobDetailsObj);
-  // console.log(company.displayName)
 
   return (
     <section className="details-wrapper">

@@ -15,7 +15,7 @@ export default function SignUp() {
     const jwtToken = Cookies.get("jwt_token");
     const user = localStorage.getItem("user");
     if (jwtToken !== undefined) navigate("/");
-    if (user !== undefined) navigate("/login");
+    if (user) navigate("/login");
   });
 
   const onChangeUserName = (event) => {

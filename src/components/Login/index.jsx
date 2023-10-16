@@ -47,6 +47,7 @@ export default function Login() {
     const user = localStorage.getItem("user");
     if (user === null) {
       return setError("User not found, please sing-up first");
+      // navigate("/signup");
     }
     // setSubmitError(false);
     const userDetails = JSON.parse(user);

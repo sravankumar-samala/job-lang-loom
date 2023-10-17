@@ -21,6 +21,7 @@
   display: grid;
   place-items: center;
   padding: 1em;
+  padding-block: 3em;
 }
 .details-wrapper {
   width: min(96%, 100ch);
@@ -50,7 +51,7 @@
 }
 .micro-details p {
   margin-block-start: 7px;
-  font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
 }
 .title {
   text-wrap: balance;

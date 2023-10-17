@@ -34,6 +34,7 @@
 }
 .title-container {
   height: 300px;
+  padding-block: 2em;
   width: 100%;
   display: grid;
   place-content: center;
@@ -43,18 +44,11 @@
   border-image-slice: 1;
 }
 .form-container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-    top: 0; */
+  width: min(100%, 360px);
 }
-/* .form-out-of-view {
-    position: absolute;
-    top: 10px;
-    z-index: 999;
-  } */
 
 .select-language {
   background-color: var(--clr-light);
@@ -66,7 +60,7 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 0.5em 1em;
-  width: min(100%, 300px);
+  flex-grow: 1;
   margin-block: 2em;
 }
 .select-language option {
@@ -78,7 +72,6 @@
 }
 
 .search-btn {
-  border: none;
   outline: none;
   padding: 0.583em 1em;
   border-radius: 0;

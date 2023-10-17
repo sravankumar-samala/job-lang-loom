@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import Popup from "reactjs-popup";
 import JobApplicationForm from "../JobApplicationForm";
+import RenderSalaryDetails from "../../Utilities/renderSalaryDetails";
 
 export default function JobDetailsSuccessView() {
   const jobDetailsObj = useSelector((state) => state.jobDetailsObj);
@@ -9,11 +10,13 @@ export default function JobDetailsSuccessView() {
     company,
     location,
     contractTime,
-    salaryIsPredicted,
+    salaryMin,
+    salaryMax,
     category,
     description,
     redirectUrl,
   } = jobDetailsObj;
+  console.log(jobDetailsObj);
 
   return (
     <section className="details-wrapper">
@@ -36,7 +39,7 @@ export default function JobDetailsSuccessView() {
         </div>
         <div className="micro-details">
           <h4>Salary</h4>
-          <p>{salaryIsPredicted === "0" && "Not specified"}</p>
+          <RenderSalaryDetails salaryMax={salaryMax} salaryMin={salaryMin} />
         </div>
       </div>
       <div className="micro-details description">

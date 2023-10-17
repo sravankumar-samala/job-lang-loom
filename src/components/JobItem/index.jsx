@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import RenderSalaryDetails from "../../Utilities/renderSalaryDetails";
 
 export default function JobItem(props) {
   const { jobObj } = props;
   const navigate = useNavigate();
-  const { id, title, company, location, salaryIsPredicted } = jobObj;
+  const { id, title, company, location, salaryMax, salaryMin } = jobObj;
 
   return (
     <li className="job-item">
@@ -18,7 +19,7 @@ export default function JobItem(props) {
       </div>
       <div className="detail-block salary">
         <p>Salary: </p>
-        <h4>{salaryIsPredicted === "0" && "Not specified"}</h4>
+        <RenderSalaryDetails salaryMax={salaryMax} salaryMin={salaryMin} />
       </div>
       <div className="detail-block location">
         <p>Location: </p>

@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header>
-      <h2 onClick={() => navigate("/home")}>JobLangLoom</h2>
+      <h2 onClick={() => navigate("/")}>JobLangLoom</h2>
       <LogoutButton />
     </header>
   );
